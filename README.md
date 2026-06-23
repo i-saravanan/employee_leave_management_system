@@ -82,7 +82,7 @@ Secure, stateless authentication:
                                ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                    🔐 JWT AUTHENTICATION FILTER                 │
-│              Validates token → Sets SecurityContext              │
+│              Validates token → Sets SecurityContext             │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
                                ▼
@@ -93,7 +93,7 @@ Secure, stateless authentication:
 │   /api/auth/*       /api/employee/*       /api/manager/*        │
 │                                                                 │
 │                         AdminController                         │
-│                         /api/admin/*                             │
+│                         /api/admin/*                            │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
                                ▼
@@ -111,7 +111,7 @@ Secure, stateless authentication:
 │                  Spring Data JPA · Hibernate                    │
 │                                                                 │
 │  EmployeeRepository  LeaveApplicationRepository                 │
-│                    LeaveBalanceRepository                        │
+│                    LeaveBalanceRepository                       │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
                                ▼
@@ -424,7 +424,7 @@ Content-Type: application/json
               ▼          ▼          ▼
        ┌──────────┐ ┌──────────┐ ┌───────────┐
        │ APPROVED │ │ REJECTED │ │ CANCELLED │
-       │    ✅    │ │    ❌    │ │    🚫     │
+       │    ✅    │ │    ❌   │ │    🚫     │
        └──────────┘ └──────────┘ └───────────┘
        by Manager   by Manager   by Employee
        (balance     (no balance  (before
